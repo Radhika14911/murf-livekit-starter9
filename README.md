@@ -1,99 +1,118 @@
-Shiksha Saathi – Multi-Agent Educational Assistant
-Day 9 – Agent Handoff | Murf AI Voice Agent Challenge
+# Shiksha Saathi – Multi-Agent Educational Assistant
+## Day 9 – Agent Handoff | Murf AI Voice Agent Challenge
 
-📖 About The Project
+---
 
-Shiksha Saathi is an AI-powered educational assistant designed to help students with academic support, exam preparation, career guidance, and learning assistance.
+## About The Project
 
-For Day 9, I upgraded the system from a single agent to a multi-agent architecture where a Main Agent intelligently transfers conversations to specialized agents whenever expert assistance is needed.
+Shiksha Saathi is an AI-powered educational assistant designed to help students with:
 
-🎯 Day 9 Objective
+- Academic support
+- Exam preparation
+- Career guidance
+- Learning assistance
+
+For Day 9, the system was upgraded from a single-agent architecture to a multi-agent architecture where a Main Agent intelligently transfers conversations to specialized agents.
+
+---
+
+## Day 9 Objective
 
 Implement Agent Handoff so that:
 
-General questions remain with the Main Agent
-Exam-related queries are routed to an Exam Specialist
-Career-related queries are routed to a Career Specialist
-Specialists continue the conversation without asking the user to repeat information
-The user is informed before the handoff occurs
-🤖 Agents Implemented
-🏠 Main Agent
+- General questions remain with the Main Agent
+- Exam-related queries are routed to the Exam Specialist
+- Career-related queries are routed to the Career Specialist
+- User context is shared during handoff
+- Specialists continue the conversation without asking users to repeat information
+
+---
+
+## Agents Implemented
+
+### Main Agent
 
 Responsibilities:
 
-Handles general educational queries
-Identifies user intent
-Decides whether specialist support is required
-Initiates agent handoff
+- Handles general educational queries
+- Detects user intent
+- Decides whether specialist support is required
+- Initiates handoff
 
 Example:
 
-User: What is Shiksha Saathi?
+**User:** What is Shiksha Saathi?
 
-
-Main Agent:
+**Main Agent:**
 I can answer that myself.
 Shiksha Saathi is an AI-powered educational support system.
-📚 Exam Support Specialist
+
+---
+
+### Exam Support Specialist
 
 Responsibilities:
 
-Exam preparation
-Revision planning
-Study schedules
-Academic stress management
+- Exam preparation
+- Revision planning
+- Study schedules
+- Academic stress management
 
 Example:
 
-User: I am stressed about my exams
+**User:** I am stressed about my exams
 
-
-Main Agent:
+**Main Agent:**
 I will connect you to our Exam Support Specialist.
 
-
-Exam Specialist:
+**Exam Specialist:**
 Hello! I am the Exam Support Specialist.
-💼 Career Specialist
+
+---
+
+### Career Specialist
 
 Responsibilities:
 
-Internship guidance
-Resume review
-LinkedIn optimization
-Interview preparation
-Career planning
+- Resume review
+- LinkedIn optimization
+- Internship guidance
+- Interview preparation
+- Career planning
 
 Example:
 
-User: Help me improve my LinkedIn profile
+**User:** Help me improve my LinkedIn profile
 
-
-Main Agent:
+**Main Agent:**
 I will connect you to our Career Specialist.
 
-
-Career Specialist:
+**Career Specialist:**
 Hello! I am the Career Specialist.
-🔄 Agent Handoff Workflow
+
+---
+
+## Agent Handoff Workflow
+
+```text
 User Query
-     │
-     ▼
- Main Agent
-     │
- ┌───┴───────────┐
- │               │
- ▼               ▼
-Exam Agent   Career Agent
- │               │
- └──────┬────────┘
-        ▼
-  Main Agent
-✨ Advanced Features
+    |
+    ▼
+Main Agent
+    |
+    ├── Exam Related → Exam Specialist
+    |
+    ├── Career Related → Career Specialist
+    |
+    └── General Query → Main Agent
+
+Advanced Features
 ✅ Multiple Specialist Agents
 
-Implemented separate Exam and Career specialists.
+Implemented separate:
 
+Exam Specialist
+Career Specialist
 ✅ Context Sharing
 
 User information is passed to specialists without requiring repetition.
@@ -111,7 +130,7 @@ If a specialist is unavailable, the Main Agent continues assisting.
 Multiple test cases were executed to verify correct agent selection.
 
 🧪 Routing Test Results
-Query	Assigned Agent
+User Query	Assigned Agent
 What is Shiksha Saathi?	Main Agent
 I am stressed about exams	Exam Specialist
 Create a study plan	Exam Specialist
@@ -127,16 +146,21 @@ Python
 Multi-Agent Architecture
 Agent Routing Logic
 Murf AI Voice Agent Framework
-🎯 Day 9 Achievement
 
-✔ Main Agent Implementation
-✔ Specialist Agent Creation
-✔ Agent Handoff Mechanism
-✔ Multi-Agent Routing
-✔ Context Transfer
-✔ Return-to-Main-Agent Flow
-✔ Routing Validation Tests
+Day 9 Achievement
 
-#10DaysofAIVoiceAgents
-#MurfFalcon
-#VoiceForBharat
+✅ Main Agent Implementation
+
+✅ Specialist Agent Creation
+
+✅ Agent Handoff Mechanism
+
+✅ Multi-Agent Routing
+
+✅ Context Transfer
+
+✅ Return-to-Main-Agent Flow
+
+✅ Routing Validation Tests
+
+#10DaysOfAIVoiceAgents #MurfFalcon #VoiceForBharat
