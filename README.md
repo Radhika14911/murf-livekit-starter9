@@ -106,61 +106,97 @@ Main Agent
     |
     └── General Query → Main Agent
 
-Advanced Features
-✅ Multiple Specialist Agents
+## Advanced Features
 
-Implemented separate:
+### ✅ Multiple Specialist Agents
 
-Exam Specialist
-Career Specialist
-✅ Context Sharing
+Implemented separate specialist agents for different domains:
 
-User information is passed to specialists without requiring repetition.
+- Exam Specialist
+- Career Specialist
 
-✅ Return to Main Agent
+Each specialist handles queries related to its area of expertise and receives the conversation through an intelligent handoff process.
 
-Specialists return the conversation after completing their task.
+---
 
-✅ Failed Handoff Handling
+### ✅ Context Sharing
 
-If a specialist is unavailable, the Main Agent continues assisting.
+User information and query context are passed directly to specialists without requiring users to repeat their requests.
 
-✅ Routing Validation
+**Example:**
 
-Multiple test cases were executed to verify correct agent selection.
+User: I am stressed about my MBA exams.
 
-🧪 Routing Test Results
-User Query	Assigned Agent
-What is Shiksha Saathi?	Main Agent
-I am stressed about exams	Exam Specialist
-Create a study plan	Exam Specialist
-MBA exam preparation	Exam Specialist
-Resume review	Career Specialist
-Internship guidance	Career Specialist
-LinkedIn optimization	Career Specialist
-Interview preparation	Career Specialist
-What services do you provide?	Main Agent
-Career planning	Career Specialist
-🛠 Tech Stack
-Python
-Multi-Agent Architecture
-Agent Routing Logic
-Murf AI Voice Agent Framework
+Main Agent transfers the query directly to the Exam Specialist while preserving the original context.
 
-Day 9 Achievement
+---
 
-✅ Main Agent Implementation
+### ✅ Return to Main Agent
 
-✅ Specialist Agent Creation
+After providing specialized assistance, the conversation can be returned to the Main Agent for handling general educational queries.
 
-✅ Agent Handoff Mechanism
+---
 
-✅ Multi-Agent Routing
+### ✅ Failed Handoff Handling
 
-✅ Context Transfer
+If a specialist is unavailable or a handoff cannot be completed successfully, the Main Agent continues assisting the user instead of ending the conversation.
 
-✅ Return-to-Main-Agent Flow
+---
 
-✅ Routing Validation Tests
+### ✅ Routing Validation
 
-#10DaysOfAIVoiceAgents #MurfFalcon #VoiceForBharat
+Multiple test cases were executed to verify that user queries are routed to the correct agent.
+
+---
+
+## 🧪 Routing Test Results
+
+| User Query | Assigned Agent |
+|------------|---------------|
+| What is Shiksha Saathi? | Main Agent |
+| I am stressed about exams | Exam Specialist |
+| Create a study plan | Exam Specialist |
+| MBA exam preparation | Exam Specialist |
+| Resume review | Career Specialist |
+| Internship guidance | Career Specialist |
+| LinkedIn optimization | Career Specialist |
+| Interview preparation | Career Specialist |
+| What services do you provide? | Main Agent |
+| Career planning | Career Specialist |
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- Multi-Agent Architecture
+- Agent Routing Logic
+- Murf AI Voice Agent Framework
+
+---
+
+## Day 9 Achievement
+
+Successfully implemented:
+
+- ✅ Main Agent
+- ✅ Exam Specialist Agent
+- ✅ Career Specialist Agent
+- ✅ Agent Handoff Mechanism
+- ✅ Multi-Agent Routing
+- ✅ Context Transfer
+- ✅ Return-to-Main-Agent Flow
+- ✅ Failed Handoff Handling
+- ✅ Routing Validation Tests
+
+---
+
+## Conclusion
+
+The Day 9 implementation successfully demonstrates a Multi-Agent Educational Assistant capable of intelligently routing user requests to specialized agents while maintaining conversation context and ensuring a seamless user experience.
+
+---
+
+#10DaysOfAIVoiceAgents  
+#MurfFalcon  
+#VoiceForBharat
